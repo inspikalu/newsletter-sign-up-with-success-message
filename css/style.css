@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif !important;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  background-color: hsl(234, 29%, 20%);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  gap: 10px;
+}
+
+.card {
+  width: 50%;
+  margin-inline: auto;
+  background-color: white;
+  border-radius: 0.45rem;
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  min-height: 400px;
+  align-items: center;
+}
+.card .card__leftSide {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  color: hsl(235, 18%, 26%);
+}
+.card .card__leftSide h1 {
+  font-size: 2rem;
+  color: hsl(234, 29%, 20%);
+}
+.card .card__leftSide p {
+  margin-block: 1rem;
+}
+.card .card__leftSide ul {
+  -webkit-margin-start: 1.8rem;
+          margin-inline-start: 1.8rem;
+  list-style-type: none;
+}
+.card .card__leftSide ul li {
+  list-style-image: url("/assets/images/icon-list.svg");
+}
+.card .card__leftSide ul li::marker {
+  font-size: 1.5em;
+}
+.card .card__leftSide form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding-top: 5px;
+}
+.card .card__leftSide form * {
+  align-self: flex-start;
+}
+.card .card__leftSide form input {
+  width: 65%;
+  padding: 10px 0;
+  text-indent: 1rem;
+  font: inherit;
+  border-radius: 9px;
+  -webkit-margin-start: 3px;
+          margin-inline-start: 3px;
+  border-style: solid;
+}
+.card .card__leftSide form input:hover {
+  border-color: hsl(231, 7%, 60%);
+  border-style: solid;
+}
+.card .card__leftSide form button {
+  width: 75%;
+  padding: 15px 10px;
+  border: 1px solid hsl(234, 29%, 20%);
+  border-radius: 9px;
+  margin-top: 9px;
+  background: hsl(234, 29%, 20%);
+  color: white;
+  text-align: center;
+  font-family: inherit;
+  cursor: pointer;
+}
+.card .card__leftSide form button:hover {
+  background-color: none;
+  background: linear-gradient(to right, #ff5378, #ff673d);
+  -o-border-image: linear-gradient(to right, #ff5378, #ff673d);
+     border-image: linear-gradient(to right, #ff5378, #ff673d);
+}
+.card .card__rightSide {
+  width: 210px;
+  height: 100%;
+}
+.card .card__rightSide img {
+  height: 100%;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    background: black;
+  }
+}/*# sourceMappingURL=style.css.map */
