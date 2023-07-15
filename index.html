@@ -47,13 +47,17 @@
           <button>Subscribe to monthly newsletter</button>
         </form>
       </section>
-      <section class="card__rightSide">
+      <picture class="card__rightSide">
+        <source media="(min-width: 1001px )" srcset="/assets/images/illustration-sign-up-desktop.svg">
+        <source media="(max-width: 1000px )" srcset="/assets/images/illustration-sign-up-mobile.svg">
         <img
-          src="/assets/images/illustration-sign-up-desktop.svg"
-          alt="Illustration to beautify the page"
+                src="/assets/images/illustration-sign-up-desktop.svg"
+                alt="Illustration to beautify the page"
         />
-      </section>
+      </picture>
+
     </section>
+
     <section class="success hidden">
       <img
         src="/assets/images/icon-success.svg"
@@ -67,6 +71,7 @@
       </p>
       <button class="success__submit">Dismiss Message</button>
     </section>
+    
     <section class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"

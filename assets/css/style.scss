@@ -5,7 +5,6 @@ $CharcoalGrey: hsl(235, 18%, 26%);
 $Grey: hsl(231, 7%, 60%);
 $White: hsl(0, 0%, 100%);
 
-$Widhts: 35%, 400pt;
 * {
   margin: 0;
   padding: 0;
@@ -30,6 +29,8 @@ $Widhts: 35%, 400pt;
   padding: 2rem;
   min-height: 400px;
   align-items: center;
+  margin-block: 10%;
+  overflow: hidden;
 }
 %button-shared {
   width: 75%;
@@ -46,45 +47,46 @@ $Widhts: 35%, 400pt;
   font-weight: 700;
 }
 %button-shared-hover {
-  background-color: none;
-  background: linear-gradient(to right, #ff5378, #ff673d);
+  background: #ff5378 linear-gradient(to right, #ff5378, #ff673d);
   border-image: linear-gradient(to right, #ff5378, #ff673d);
 }
+
 body {
   background-color: $DarkSlateGrey;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  overflow-y: auto;
 }
+
 .card {
   @extend %card-shared;
+
   .card__leftSide {
     display: flex;
     flex-direction: column;
     width: 70%;
     color: $CharcoalGrey;
+
     h1 {
       font-size: 2rem;
       color: $DarkSlateGrey;
     }
+
     p {
       margin-block: 1rem;
       max-width: 40ch;
     }
+
     ul {
       margin-inline-start: 1.8rem;
       list-style-type: none;
+
       li {
-        list-style-image: url("/assets/images/icon-list.svg");
+       list-style-image: url("../images/icon-list.svg");
+        //list-style-image: url("/assets/images/icon-list.svg");
         line-height: 1.5;
         padding-left: 1rem;
       }
+
       li::marker {
+        content: url("../images/icon-list.svg");
         font-size: 1.5em;
         line-height: 1.5;
       }
@@ -102,55 +104,60 @@ body {
       * {
         align-self: flex-start;
       }
+
       div {
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 10px;
+
         .errorMessage {
           display: none;
           font-size: small;
           color: $Tomato;
         }
+
         .errorMessage.open {
           display: flex;
         }
       }
+
       input {
-        width: 65%;
-        padding: 10px 0;
+        width: 75%;
+        padding: 10px 4px;
         text-indent: 1rem;
         font: inherit;
         border-radius: 9px;
-        margin-inline-start: 3px;
         border-style: solid;
       }
+
       input:hover {
         border-color: $Grey;
         border-style: solid;
       }
+
       input.error {
         border-color: $Tomato;
       }
+
       button {
         @extend %button-shared;
       }
+
       button:hover {
         @extend %button-shared-hover;
       }
     }
   }
-  .card__rightSide {
-    width: 210px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    overflow: hidden;
-    img {
+
+  .card__rightSide{
+    display: block;
+    width: 30%;
+height: auto;
+    align-self: flex-start;
+
+    img{
       width: 100%;
-      max-height: 100%;
     }
   }
 }
@@ -166,44 +173,67 @@ body {
   *:not(.success__submit) {
     align-self: flex-start;
   }
+
   h1 {
     font-size: 2.5rem;
     width: 15ch;
     color: $DarkSlateGrey;
   }
+
   p {
     color: $Grey;
+
     span {
       color: $DarkSlateGrey;
       font-weight: 700;
     }
   }
+
   button {
     @extend %button-shared;
   }
+
   button:hover {
     @extend %button-shared-hover;
   }
 }
+
 .card.hidden,
 .success.hidden {
   display: none;
 }
 
-@media (max-width: 1000px) {
-  .card {
-    flex-direction: column-reverse;
-  }
+  @media (max-width: 1000px) {
+    .card {
+      flex-direction: column-reverse;
+      height: 100%;
+      padding: 0 0 10px;
 
-  .success,
-  .card {
-    width: 90%;
-  }
-  .card__rightSide {
-    width: 100% !important;
-    img {
-      width: 100% !important;
-      max-height: none !important;
-    }
-  }
+      .card__leftSide{
+        margin-inline: 0;
+        align-self: flex-start;
+        width: 100%;
+        padding-inline: 15px;
+        padding-block-start: 10px;
+
+div{
+  margin-left: 4.5rem;
 }
+        input, button{
+          margin-inline: auto;
+        }
+      }
+
+      .card__rightSide{
+        width: 100%;
+      }
+
+    }
+
+    .success,
+    .card {
+      width: 80%;
+      height: 90%;
+    }
+
+  }
