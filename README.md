@@ -38,7 +38,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub Link Url](https://github.com/inspikalu/newsletter-sign-up-with-success-message)
-- Live Site URL: [Vercel Page Url](https://flourishing-seahorse-a87e46.netlify.app/)
+- Live Site URL: [Vercel Page Url](https://newsletter-sign-up-with-success-message-3yl4.onrender.com/)
 
 ## My process
 
